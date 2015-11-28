@@ -21,10 +21,9 @@ function hbmi_display_fc() {
 			<section class="row content-area hero-row <?php the_sub_field( 'css_class' ); ?>" style="background-image: url('<?php the_sub_field( 'hero_image' ); ?>');">
 				<div class="wrap">
 					<div class="heading-container-wrap">
-						<h2 class="section-heading"><?php the_sub_field( 'hero_heading' ); ?></h2>
-					</div>
-					<div class="hero-content">
-						<?php the_sub_field( 'hero_content' ); ?>
+						<div class="hero-content">
+							<?php the_sub_field( 'hero_content' ); ?>
+						</div>
 					</div>
 				</div>
 			</section>
