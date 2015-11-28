@@ -1,0 +1,21 @@
+{
+  "name": "hbmi-theme",
+  "homepage": "https://github.com/joedooley/hbmi",
+  "authors": [
+    "Joe Dooley <hello@developingdesigns.com>"
+  ],
+  "description": "A custom Genesis child theme for HBMI.",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sanitize.css": "~2.0.0"
+  }
+}
