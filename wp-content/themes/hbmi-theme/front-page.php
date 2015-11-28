@@ -13,12 +13,13 @@ function hbmi_display_fc() {
 		// loop through the rows of data
 	while ( have_rows('flexible_content') ) : the_row();
 
-
 			// "Hero" Layout
-		if ( get_row_layout() === 'hero_row' ) { ?>
+		if ( get_row_layout() === 'hero_row' ) {
+
+			$bg_image = get_sub_field( 'hero_image' ); ?>
 
 
-			<section class="row content-area hero-row <?php the_sub_field( 'css_class' ); ?>" style="background-image: url('<?php the_sub_field( 'hero_image' ); ?>');">
+			<section class="row content-section hero-row <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $bg_image['url']; ?>); background-size: cover;">
 				<div class="wrap">
 					<div class="heading-container-wrap">
 						<div class="hero-content">
@@ -30,9 +31,11 @@ function hbmi_display_fc() {
 
 
 
-		 <?php } elseif( get_row_layout() === 'full_row' ) { ?>
+		 <?php } elseif( get_row_layout() === 'row_with_heading' ) {
 
-			<section class="row content-area <?php the_sub_field( 'css_class' ); ?>">
+			$bg_color = get_sub_field( 'background_color' ); ?>
+
+			<section class="row content-section <?php the_sub_field( 'css_class' ); ?>" style="background-color:<?= $bg_color; ?>;">
 					<div class="wrap">
 						<div class="heading-wrap">
 							<h2 class="section-heading"><?php the_sub_field( 'section_heading' ); ?></h2>
@@ -43,10 +46,12 @@ function hbmi_display_fc() {
 
 			<?php
 
-			} elseif( get_row_layout() === 'partner_client_row' ) { ?>
+			} elseif( get_row_layout() === 'row_without_heading' ) {
 
+			$background_image = get_sub_field( 'background_image' );
+			?>
 
-				<section class="row image-area <?php the_sub_field( 'css_class' ); ?>">
+			<section class="row content-section <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $background_image['url']; ?>); background-size: cover;">
 					<div class="wrap">
 						<div class="heading-wrap">
 							<h2 class="section-heading"><?php the_sub_field( 'section_heading' ); ?></h2>

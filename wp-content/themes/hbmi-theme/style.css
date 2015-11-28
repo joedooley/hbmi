@@ -2303,3 +2303,22 @@ body.woocommerce-page div.product div.images {
 }
 
 small { font-size: 1em; }
+
+/* ## Home Page Sections
+----------------------------------- */
+
+.heading-container-wrap {
+	padding: 250px 0;
+}
+
+.what-we-do-section {
+	padding: 300px 0;
+}
+
+.our-services-section {
+	padding: 325px 0;
+}
+
+.testimonials-section {
+	padding: 275px 0;
+}
