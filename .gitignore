@@ -1,5 +1,5 @@
-# WordPress #
-############
+# Vagrant WordPress #
+#####################
 wp-config.php
 wp-config-local.php
 wp-content/uploads
@@ -8,21 +8,18 @@ wp-content/upgrade/
 wp-content/backup-db/
 wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
+wp-content/debug.log
 sitemap.xml
 sitemap.xml.gz
 *.log
 
-# Vagrant WordPress #
-#####################
-htdocs/wp-config.php
-htdocs/wp-config-local.php
-htdocs/wp-content/uploads
-htdocs/wp-content/blogs.dir/
-htdocs/wp-content/upgrade/
-htdocs/wp-content/backup-db/
-htdocs/wp-content/advanced-cache.php
-htdocs/wp-content/wp-cache-config.php
-htdocs/wp-content/debug.log
+# Package Managers #
+####################
+
+wp-content/themes/hbmi-theme/bower_components
+wp-content/themes/hbmi-theme/node_modules
+wp-content/themes/hbmi-theme/vendor
+
 
 # @TODO writable paths
 wp-content/cache/
