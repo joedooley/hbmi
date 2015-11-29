@@ -10,62 +10,66 @@
 // Function displaying Flexible Content Field
 function hbmi_display_fc() {
 
-		// loop through the rows of data
-	while ( have_rows('flexible_content') ) : the_row();
+	// loop through the rows of data
+	while ( have_rows( 'flexible_content' ) ) : the_row();
 
 			// "Hero" Layout
-		if ( get_row_layout() === 'hero_row' ) {
+			if ( get_row_layout() === 'hero_row' ) {
 
-			$bg_image = get_sub_field( 'hero_image' ); ?>
+				$bg_image = get_sub_field( 'hero_image' ); ?>
 
-
-			<section class="row content-section hero-row <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $bg_image['url']; ?>); background-size: cover;">
-				<div class="wrap">
-					<div class="heading-container-wrap">
-						<div class="hero-content">
-							<?php the_sub_field( 'hero_content' ); ?>
+				<section class="row content-section hero-row <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $bg_image['url']; ?>); background-size: cover;">
+					<div class="wrap">
+						<div class="heading-container-wrap">
+							<div class="hero-content">
+								<?php if ( get_sub_field( 'hero_content' ) ) :
+									the_sub_field( 'hero_content' );
+								endif; ?>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
 
+			<?php } elseif ( get_row_layout() === 'row_with_heading' ) {
 
+				$bg_color = get_sub_field( 'background_color' );
+				?>
 
-		 <?php } elseif( get_row_layout() === 'row_with_heading' ) {
-
-			$bg_color = get_sub_field( 'background_color' ); ?>
-
-			<section class="row content-section <?php the_sub_field( 'css_class' ); ?>" style="background-color:<?= $bg_color; ?>;">
+				<section class="row content-section <?= the_sub_field( 'css_class' ); ?>" style="background-color: <?= $bg_color; ?>;">
 					<div class="wrap">
 						<div class="heading-wrap">
-							<h2 class="section-heading"><?php the_sub_field( 'section_heading' ); ?></h2>
+							<h2 class="section-heading">
+								<?php if ( get_sub_field( 'section_heading' ) ) :
+									the_sub_field( 'section_heading' );
+								endif; ?>
+							</h2>
 						</div>
-						<?php the_sub_field( 'content_area' ); ?>
+						<div class="content-area">
+							<?php if ( get_sub_field( 'content_area' ) ) :
+								the_sub_field( 'content_area' );
+							endif; ?>
+						</div>
 					</div>
-			</section>
+				</section>
 
-			<?php
 
-			} elseif( get_row_layout() === 'row_without_heading' ) {
+			<?php } elseif ( get_row_layout() === 'row_without_heading' ) {
 
-			$background_image = get_sub_field( 'background_image' );
-			?>
+				$background_image = get_sub_field( 'background_image' ) ? get_sub_field( 'background_image' ) : ''; ?>
 
-			<section class="row content-section <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $background_image['url']; ?>); background-size: cover;">
+				<section class="row content-section <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $background_image['url']; ?>); background-size: cover;">
 					<div class="wrap">
-						<div class="heading-wrap">
-							<h2 class="section-heading"><?php the_sub_field( 'section_heading' ); ?></h2>
-						</div>						
-						<?php the_sub_field( 'content_area' ); ?>
+						<div class="content-area">
+							<?php if ( get_sub_field( 'content_area' ) ) :
+								the_sub_field( 'content_area' );
+							endif; ?>
+						</div>
 					</div>
-
 				</section>
 
 			<?php }
 
-
 	endwhile;
-
 
 }
 
