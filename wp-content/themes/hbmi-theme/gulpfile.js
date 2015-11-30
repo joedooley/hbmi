@@ -172,10 +172,49 @@ gulp.task('bs-reload', function () {
 //     .pipe(gulp.dest( config.ICONS.build ));
 // });
 
+// gulp.task('icons', function(){
+//   gulp.src("assets/sass/components/icons/symbol-font-14px.sketch")
+//     .pipe( plugins.sketch({
+//       export: 'slices',
+//       formats: 'svg'
+//     }))
+//     .pipe( plugins.iconfontCss({
+//       fontName: config.ICONS.fontname,
+//       path: './assets/assets/sass/components/icons/_icons-template.scss',
+//       targetPath: '../../../src/sass/components/icons/_icons.scss',
+//       fontPath: './assets/fonts/',
+//     }))
+//     .pipe( plugins.iconfont({
+//       fontName: config.ICONS.fontname
+//     }))
+//     .pipe(gulp.dest( config.ICONS.build ));
+// });
 
 
 
+// DEPLOY ---------------------------------------------------------------------
+// Runs the deployment script
+// Use it after pushing the local repo into the remote repository
+// gulp.task('deploy', function () {
+// plugins.run('ssh wordpress@wp.webispot.com "cd wordpress/mw-public/themes ; git pull"').exec()
+//    // .pipe(gulp.dest('output'))    // Writes "Hello World\n" to output/echo.
+// })
 
+
+// GLOBAL TASKS ---------------------------------------------------------------
+gulp.task('watch', function () {
+  // gulp.watch( config.HTML.src , [browserSync.reload] );
+  gulp.watch( config.HTML.src , ['bs-reload'] );
+  gulp.watch( config.JS.src , ["webpack"]);
+  gulp.watch( config.JS.buildFiles , ["js"] );
+  gulp.watch( config.IMAGES.png.src , ['buildPNG'] );
+  gulp.watch( config.SASS.src , ['sass']  );
+});
+
+gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('dev', ['browser-sync', 'watch']);
+gulp.task('build', ['sass-build'] );
+gulp.task('server', ['browser-sync'] );
 
 
 
