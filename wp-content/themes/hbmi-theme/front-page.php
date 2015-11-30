@@ -79,7 +79,6 @@ add_action( 'get_header', 'hbmi_fc_check' );
 function hbmi_fc_check() {
 	// If "Flexible Content" field has rows of data
 	if( ! is_admin() ) {
-		add_action( 'wp_enqueue_scripts', 'hbmi_flexbox_support_check' );
 
 		// Force full width content
 		add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
@@ -94,11 +93,6 @@ function hbmi_fc_check() {
 		// Add custom body class
 		add_filter( 'body_class', 'hbmi_body_class' );
 	}
-}
-
-
-function hbmi_flexbox_support_check() {
-	wp_enqueue_script( 'modernizer', get_stylesheet_directory_uri() . '/js/modernizer.flexbox.min.js' );
 }
 
 function hbmi_body_class( $classes ) {

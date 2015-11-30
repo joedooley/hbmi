@@ -7,7 +7,7 @@ require_once( CHILD_DIR . '/lib/theme-functions.php' );
 
 // Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'HBMI Theme' );
-define( 'CHILD_THEME_URL', 'http://dev-hbmi.pantheon.io/' );
+define( 'CHILD_THEME_URL', 'http://hbmi-local.dev' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 define( 'CHILD_DOMAIN', 'hbmi-theme' );
 
@@ -25,16 +25,11 @@ add_action( 'wp_enqueue_scripts', 'hbmi_custom_scripts_styles' );
  */
 function hbmi_custom_scripts_styles() {
 
-	wp_enqueue_style( 'font-styles', get_stylesheet_directory_uri() . '/fonts/stylesheet.css', CHILD_THEME_VERSION );
+	wp_enqueue_style( 'font-styles', get_stylesheet_directory_uri() . '/lib/fonts/stylesheet.css', CHILD_THEME_VERSION );
 
+	wp_enqueue_script( 'index', get_stylesheet_directory_uri() . '/lib/js/index.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
-	wp_enqueue_script( 'global', get_stylesheet_directory_uri() . '/js/global.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
-
-	wp_enqueue_script( 'responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
-
-	//wp_enqueue_script( 'backstretch',  get_stylesheet_directory_uri() . '/js/jquery.backstretch.min.js', array('jquery' ), '', true );
-
-	//wp_enqueue_script( 'backstretch-set',  get_stylesheet_directory_uri() . '/js/backstretch-set.js', array('backstretch' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'responsive-menu', get_stylesheet_directory_uri() . '/lib/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 
 }
