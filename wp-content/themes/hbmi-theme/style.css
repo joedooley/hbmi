@@ -1,3 +1,80 @@
+/*! # HBMI
+Theme Name: HBMI
+Theme URI: https://github.com/joedooley/hbmi
+Description: This is a custom child theme for HBMI
+Author: Joe Dooley
+Author URI: http://www.developingdesigns.com/
+Template: genesis
+Template Version: 2.2.0
+Tags: black, orange, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/* # Table of Contents
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Gallery
+	- Forms
+	- Tables
+	- Screen Reader Text
+- Structure and Layout
+	- Site Containers
+	- Column Widths and Positions
+	- Column Classes
+- Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
+- Widgets
+	- Featured Content
+- Plugins
+	- Genesis eNews Extended
+	- Jetpack
+- Site Header
+	- Title Area
+	- Widget Area
+- Site Navigation
+	- Accessible Menu
+	- Site Header Navigation
+	- Primary Navigation
+	- Secondary Navigation
+	- Skip Links
+- Content Area
+	- Entries
+	- Entry Meta
+	- Pagination
+	- Comments
+- Sidebars
+- Site Footer
+- Media Queries
+	- Retina Display
+	- Max-width: 1200px
+	- Max-width: 960px
+	- Max-width: 800px
+- Print Styles
+*/
+
+
+/* # HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+
+/*! ## Baseline Normalize
+--------------------------------------------- */
+
+/*
+ * Sanitize 2.0.0 (http://git.io/sanitize)
+ * Licensed under the MIT License.
+ */
 /* Character Set */
 /**
  * Importing Bourbon, Neat, Refills and _grid_settings.scss  
