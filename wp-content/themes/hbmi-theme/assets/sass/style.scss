@@ -1,0 +1,19 @@
+/* Character Set */
+@charset 'utf-8';
+
+/**
+ * Importing Bourbon, Neat, Refills and _grid_settings.scss  
+ *
+ */
+
+@import "bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "layout/grid-settings";
+@import "bower_components/neat/app/assets/stylesheets/neat";
+@import "vendors/base/base";
+
+/**
+ * Main layout
+ *
+ */
+
+ @import "layout/index";
