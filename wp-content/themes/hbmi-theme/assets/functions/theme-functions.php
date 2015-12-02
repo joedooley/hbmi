@@ -27,7 +27,7 @@ if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 add_filter( 'genesis_seo_title', 'hbmi_header_inline_logo', 10, 3 );
 function hbmi_header_inline_logo( $title, $inside, $wrap ) {
 
-	$logo = '<img src="' . get_stylesheet_directory_uri() . 'assets/images/logo@2x.png" alt="' . esc_attr( get_bloginfo(
+	$logo = '<img src="' . get_stylesheet_directory_uri() . '/assets/images/logo@2x.png" alt="' . esc_attr( get_bloginfo(
 					'name' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" width="384" height="159" />';
 
 	$inside = sprintf( '<a href="%s" title="%s">%s</a>', trailingslashit( home_url() ), esc_attr( get_bloginfo( 'name' ) ), $logo );
