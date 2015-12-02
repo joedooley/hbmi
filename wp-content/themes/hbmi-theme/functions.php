@@ -3,17 +3,13 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 // Include theme-functions.php
-require_once( CHILD_DIR . '/lib/theme-functions.php' );
+require_once( CHILD_DIR . '/functions/theme-functions.php' );
 
 // Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'HBMI Theme' );
 define( 'CHILD_THEME_URL', 'http://hbmi-local.dev' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 define( 'CHILD_DOMAIN', 'hbmi-theme' );
-
-
-//* Enable Support for WooCommerce
-add_theme_support( 'genesis-connect-woocommerce' );
 
 
 add_action( 'wp_enqueue_scripts', 'hbmi_custom_scripts_styles' );
@@ -25,11 +21,11 @@ add_action( 'wp_enqueue_scripts', 'hbmi_custom_scripts_styles' );
  */
 function hbmi_custom_scripts_styles() {
 
-	wp_enqueue_style( 'font-styles', get_stylesheet_directory_uri() . '/lib/fonts/stylesheet.css', CHILD_THEME_VERSION );
+	wp_enqueue_style( 'font-styles', get_stylesheet_directory_uri() . '/assets/fonts/stylesheet.css', CHILD_THEME_VERSION );
 
-	wp_enqueue_script( 'index', get_stylesheet_directory_uri() . '/lib/js/index.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'customjs', get_stylesheet_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
-	wp_enqueue_script( 'responsive-menu', get_stylesheet_directory_uri() . '/lib/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'vendorsjs', get_stylesheet_directory_uri() . '/assets/js/vendors.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 
 }

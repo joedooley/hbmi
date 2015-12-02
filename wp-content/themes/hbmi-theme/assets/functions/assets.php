@@ -12,7 +12,8 @@ namespace HBMI;
  * Enqueue scripts in the following order:
  * 1. /hbmi-theme/public/js/modernizr.flexbox.min.js
  * 2. /hbmi-theme/public/js/app.js
- */
+ *
+
 function asset_path($filename) {
 
 	$dist_path = get_stylesheet_directory() . bourboneat_dist_dir;

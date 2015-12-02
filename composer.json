@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpunit/phpunit-selenium": "^1.4",
+        "phpunit/dbunit": "> 1.2",
+        "phpunit/php-invoker": "~1.1"
+    }
+}
