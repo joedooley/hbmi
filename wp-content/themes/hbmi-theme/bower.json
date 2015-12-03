@@ -17,9 +17,5 @@
   ],
   "dependencies": {
     "sanitize.css": "~2.0.0"
-  },
-  "devDependencies": {
-    "bourbon": "~4.2.6",
-    "neat": "~1.7.2"
   }
 }

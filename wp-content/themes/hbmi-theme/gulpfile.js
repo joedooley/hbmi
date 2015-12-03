@@ -12,7 +12,7 @@
 var project = 'hbmi-theme', // Project name, used for build zip.
   url       = 'hbmi-local.dev', // Local Development URL for BrowserSync. Change as-needed.
   bower     = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
-  build     = './dist/', // Files that you want to package into a zip go here
+  build     = 'dist/', // Files that you want to package into a zip go here
   buildInclude  = [
         // include common file types
         '**/*.php',
@@ -48,6 +48,7 @@ var gulp            = require('gulp'),
     filter          = require('gulp-filter'),
     uglify          = require('gulp-uglify'),
     imagemin        = require('gulp-imagemin'),
+    pngquant        = require('imagemin-pngquant'),
     newer           = require('gulp-newer'),
     rename          = require('gulp-rename'),
     concat          = require('gulp-concat'),
@@ -175,10 +176,15 @@ gulp.task('scriptsJs', function() {
 gulp.task('images', function() {
 
 // Add the newer pipe to pass through newer images only
-  return  gulp.src(['./assets/images/raw/**/*.{png,jpg,gif,svg}'])
-        .pipe(newer('./assets/images/'))
+  return  gulp.src('./assets/images/raw/*.png')
+        .pipe(newer('assets/images/'))
         .pipe(rimraf({ force: true }))
-        .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
+        .pipe(imagemin({ 
+            optimizationLevel: 7,
+            progressive: true,
+            interlaced: true,
+            use: [pngquant()]
+        }))
         .pipe(gulp.dest('./assets/images/'))
         .pipe( notify( { message: 'Images task complete', onLast: true } ) );
 });
@@ -233,8 +239,8 @@ gulp.task('buildFiles', function() {
 * Look at assets/images, optimize the images and send them to the appropriate place
 */
 gulp.task('buildImages', function() {
-  return  gulp.src(['assets/images/**/*', '!assets/images/raw/**'])
-    .pipe(gulp.dest(build+'assets/images/'))
+  return  gulp.src(['assets/images', '!assets/images/raw'])
+    .pipe(gulp.dest(build+'assets/images'))
     .pipe(plugins.notify({ message: 'Images copied to buildTheme folder', onLast: true }));
 });
 
@@ -263,7 +269,7 @@ return  gulp.src(build+'/**/')
 
 // Package Distributable Theme
 gulp.task('images', function(cb) {
-runSequence('buildImages', cb);
+gulp.watch('./assets/images/raw/**/*', ['images']); 
 });
 
 // Package Distributable Theme
