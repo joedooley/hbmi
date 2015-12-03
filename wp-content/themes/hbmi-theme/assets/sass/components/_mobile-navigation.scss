@@ -1,0 +1,25 @@
+/* Responsive Menu
+--------------------------------------------- */
+
+.responsive-menu-icon {
+  cursor:     pointer;
+  display:    none;
+  text-align: center;
+}
+
+.responsive-menu-icon::before {
+  content: "\f0c9";
+  display: inline-block;
+  font:    normal 20px/1 'FontAwesome';
+  margin:  0 auto;
+  padding: 16px 7px 16px 16px;
+}
+
+.nav-primary .responsive-menu-icon::before {
+  color: #fff;
+}
+
+.menu-text {
+  color:      #fff;
+  margin-top: 1em;
+}

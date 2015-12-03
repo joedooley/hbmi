@@ -1,9 +1,14 @@
 // Typography
-$base-font-family: $helvetica;
-$heading-font-family: $base-font-family;
+$cooper-bold: 'cooper_hewittsemibold', 'Verdana', sans-serif;
+$cooper-semibold: 'cooper_hewittsemibold', 'Verdana', sans-serif;
+$cooper-semibold-italic: 'cooper_hewittsemibold_italic', 'Verdana', sans-serif;
+$cooper-book: 'cooper_hewittbook', 'Verdana', sans-serif;
+$base-font-family: $cooper-book;
+$heading-font-family: $cooper-bold;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: em(18px);
+$large-heading-font-size: 2.5em;
 
 // Line height
 $base-line-height: 1.5;
@@ -16,17 +21,16 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$dark-gray: #5c6770;
+$white: #fff;
+$green: #96c93d;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: $dark-gray;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $dark-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors

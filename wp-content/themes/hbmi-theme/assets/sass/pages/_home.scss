@@ -1,0 +1,54 @@
+.hero {
+  $base-border-radius: 3px !default;
+  $action-color: #477dca !default;
+  $large-screen: em(860) !default;
+  $hero-background-top: #7f99be;
+  $hero-background-bottom: #20392b;
+  $gradient-angle: 10deg;
+
+  @include background(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  background-color:    #324766;
+  background-position: top;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  padding-bottom:      3em;
+
+  .hero-logo img {
+	height:        4em;
+	margin-bottom: 1em;
+  }
+
+  .hero-inner {
+	@include outer-container;
+	@include clearfix;
+	margin:     auto;
+	padding:    3.5em;
+	text-align: center;
+
+	.hero-copy {
+	  text-align: center;
+
+	  h1 {
+		color:         $dark-gray;
+		font-size:     $large-heading-font-size;
+		margin-bottom: 0.5em;
+
+		@include media($large-screen) {
+		  font-size: 3em;
+		}
+	  }
+	}
+  }
+}
+
+
+
+/* General Page Elements */
+.row-wrapper {
+  @include row();
+
+  .outer-container {
+	@include outer-container;
+  }
+}
+

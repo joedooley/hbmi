@@ -3,21 +3,15 @@
  *
  */
 
+@import 'vendors/sanitize.css/sanitize';
 @import 'vendors/bourbon/bourbon';
-@import 'vendors/base/base';
-@import 'layout/grid-settings';
+@import 'base/grid-settings';
+@import 'base/base';
 @import 'vendors/neat/neat';
-
-/**
- * Sanitze.css reset
- */
-@import 'bower_components/sanitize.css/dist/sanitize.min.css';
 
 /**
  * Base CSS
  */
-@import 'base/settings';
-@import 'base/typography';
 
 
 /**
@@ -25,4 +19,8 @@
  *
  */
 
+@import 'layout/navigation';
+@import 'components/mobile-navigation';
+@import 'pages/home';
 @import 'layout/index';
+

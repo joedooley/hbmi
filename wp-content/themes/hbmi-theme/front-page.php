@@ -18,36 +18,36 @@ function hbmi_display_fc() {
 
 				$bg_image = get_sub_field( 'hero_image' ); ?>
 
-				<section class="row content-section hero-row <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $bg_image['url']; ?>); background-size: cover;">
-					<div class="wrap">
-						<div class="heading-container-wrap">
-							<div class="hero-content">
+				<div class=" hero <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $bg_image['url']; ?>); background-size: cover;">
+					<div class="hero-inner">
+						<div class="hero-copy">
 								<?php if ( get_sub_field( 'hero_content' ) ) :
 									the_sub_field( 'hero_content' );
 								endif; ?>
-							</div>
 						</div>
 					</div>
-				</section>
+				</div>
 
 			<?php } elseif ( get_row_layout() === 'row_with_heading' ) {
 
 				$bg_color = get_sub_field( 'background_color' );
 				?>
 
-				<section class="row content-section <?= the_sub_field( 'css_class' ); ?>" style="background-color: <?= $bg_color; ?>;">
-					<div class="wrap">
-						<div class="heading-wrap">
-							<h2 class="section-heading">
-								<?php if ( get_sub_field( 'section_heading' ) ) :
-									the_sub_field( 'section_heading' );
+				<section class="row-wrapper <?= the_sub_field( 'css_class' ); ?>" style="background-color: <?= $bg_color; ?>;">
+					<div class="outer-container">
+						<div class="section-wrap">
+							<div class="heading-wrap">
+								<h2 class="section-heading">
+									<?php if ( get_sub_field( 'section_heading' ) ) :
+										the_sub_field( 'section_heading' );
+									endif; ?>
+								</h2>
+							</div>
+							<div class="content-area">
+								<?php if ( get_sub_field( 'content_area' ) ) :
+									the_sub_field( 'content_area' );
 								endif; ?>
-							</h2>
-						</div>
-						<div class="content-area">
-							<?php if ( get_sub_field( 'content_area' ) ) :
-								the_sub_field( 'content_area' );
-							endif; ?>
+							</div>
 						</div>
 					</div>
 				</section>
