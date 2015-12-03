@@ -147,7 +147,7 @@ a.alignleft,img.alignleft,.wp-caption.alignleft{margin:0 24px 24px 0}a.alignrigh
 .testimonials .wrap{padding:12em 0}.testimonials .section-heading{font-family:'cooper_hewittsemibold_italic','Verdana','sans-serif';font-size:3.5em;color:#5c6770}
 .testimonials p{color:#96c93d;font-size:2em;font-family:'cooper_hewittsemibold_italic','Verdana','sans-serif'}
 .partners .section-heading{color:#96c93d}.clients .section-heading{color:#82bc00}
-.footer-widgets{background-image:url(/wp-content/themes/hbmi-theme/images/footer-bg.png);background-size:cover}
+.footer-widgets{background-image:url(/wp-content/themes/hbmi-theme/assets/images/footer-bg.png);width:1500px;height:600px;background-size:cover}
 .footer-widgets .wrap{padding-top:2em}.footer-widgets a,.footer-widgets p{font-family:'cooper_hewittbook';font-style:normal;color:#fff}
 .home .gfield_label{color:#96c93d}.home .gform_wrapper .top_label input.medium,.home .gform_wrapper .top_label select.medium{width:100%;padding:15px 0}
 .gform_wrapper .gform_footer input.button{background:#96c93d}.page-id-12 .entry-title{margin-bottom:2em}
