@@ -1,0 +1,42 @@
+// Widgets
+.widget {
+  word-wrap: break-word;
+}
+
+.widget ol > li {
+  list-style: decimal inside;
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+.widget li li {
+  border: 0;
+  margin: 0 0 0 30px;
+  padding: 0;
+}
+
+.widget_calendar table {
+  width: 100%;
+}
+
+.widget_calendar td,
+.widget_calendar th {
+  text-align: center;
+}
+
+.widget-title {
+  color: #fff;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+
+.widget_search input[type="submit"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+

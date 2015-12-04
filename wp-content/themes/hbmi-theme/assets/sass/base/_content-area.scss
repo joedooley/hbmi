@@ -1,0 +1,93 @@
+// Featured Content
+.featured-content .entry {
+  margin-bottom: 20px;
+  padding: 0 0 24px;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.featured-content .entry-title {
+  font-size: 1.2em;
+}
+
+// WordPress Content Area Article Entries
+// Entry Content
+.entry {
+  margin-bottom: 40px;
+  padding: 50px 60px;
+}
+
+.content .entry {
+  background-color: #fff;
+  margin-top: 11em;
+}
+
+.entry-content ol,
+.entry-content ul {
+  margin-bottom: 28px;
+  margin-left: 40px;
+}
+
+.entry-content ol > li {
+  list-style-type: decimal;
+}
+
+.entry-content ul > li {
+  list-style-type: disc;
+}
+
+.entry-content ol ol,
+.entry-content ul ul {
+  margin-bottom: 0;
+}
+
+.entry-content code {
+  background-color: #333;
+  color: #ddd;
+}
+
+// Entry Meta: Entry Header
+.entry-title {
+  font-size: 2em;
+}
+
+.entry-title a,
+.sidebar .widget-title a {
+  color: #333;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+  color: #c3251d;
+}
+
+p.entry-meta {
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+
+// Entry Meta: Entry Footer
+.entry-header .entry-meta {
+  margin-bottom: 24px;
+}
+
+.entry-footer .entry-meta {
+  border-top: 2px solid #f5f5f5;
+  padding-top: 24px;
+}
+
+.entry-categories,
+.entry-tags {
+  display: block;
+}
+
+.entry-comments-link::before {
+  content: "\2014";
+  margin: 0 6px 0 2px;
+}
+
+// Search Form
+.entry-content .search-form {
+  width: 50%;
+}
+
+

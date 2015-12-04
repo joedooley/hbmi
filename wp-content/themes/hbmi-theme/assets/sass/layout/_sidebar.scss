@@ -1,0 +1,17 @@
+// Styles for Sidebars
+.sidebar {
+  font-size: 1.6rem;
+  margin-top: em(15px);
+}
+
+.sidebar p:last-child,
+.sidebar ul > li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar .widget {
+  padding: 0 40px;
+}
+
+
+

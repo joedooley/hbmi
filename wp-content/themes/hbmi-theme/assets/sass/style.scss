@@ -1,37 +1,29 @@
-/**
- * Importing Bourbon, Neat, Refills and _grid_settings.scss  
- *
- */
+// Importing Bourbon, Neat, Refills and _grid_settings.scss
+@import "vendors/sanitize.css/sanitize";
+@import "vendors/bourbon/bourbon";
+@import "base/grid-settings";
+@import "base/base";
+@import "vendors/neat/neat";
 
-@import 'vendors/sanitize.css/sanitize';
-@import 'vendors/bourbon/bourbon';
-@import 'base/grid-settings';
-@import 'base/base';
-@import 'vendors/neat/neat';
 
-/**
- * Base CSS
- */
-
-@import "base/genesis-columns";
+// Base CSS
+@import "base/wordpress-classes";
+@import "base/genesis-layout";
 @import "base/accessibility";
 
 
-
-
-
-/**
- * Main layout
- *
- */
-
+// Main layout
 @import "layout/header";
-@import 'layout/navigation';
-@import 'components/mobile-navigation';
-@import 'pages/home';
-@import 'layout/index';
+@import "layout/navigation";
+@import "components/mobile-navigation";
+@import "pages/archives";
+@import "layout/sidebar";
+@import "base/content-area";
+@import "pages/home";
+@import "layout/index";
 @import "components/pagination";
+@import "components/author";
 @import "base/comments";
-@import 'layout/footer';
+@import "layout/footer";
 
 

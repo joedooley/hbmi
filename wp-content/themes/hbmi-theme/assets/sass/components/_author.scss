@@ -1,0 +1,34 @@
+// Author Box
+.author-box {
+  background-color: #fff;
+  font-size: 0.9em;
+  margin-bottom: 40px;
+  padding: 40px;
+}
+
+.author-box-title {
+  font-size: 0.9em;
+  margin-bottom: 4px;
+}
+
+.author-box p:last-child {
+  margin-bottom: 0;
+}
+
+// Avatar
+.avatar {
+  float: left;
+}
+
+.alignleft .avatar,
+.author-box .avatar {
+  margin-right: 24px;
+}
+
+.alignright .avatar {
+  margin-left: 24px;
+}
+
+.comment .avatar {
+	margin: 0 16px 24px 0;
+}

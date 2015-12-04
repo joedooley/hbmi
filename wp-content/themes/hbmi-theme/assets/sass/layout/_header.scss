@@ -1,37 +1,56 @@
-/* # Site Header
----------------------------------------------------------------------------------------------------- */
+// Site Header
 
 .site-header {
-  position:   fixed;
-  z-index:    999;
-  width:      100%;
-  background: rgba(255, 255, 255, .6);
+  background-color: rgba(255, 255, 255, .6);
+  position: fixed;
   text-align: right;
+  width: 100%;
+  z-index: 999;
 }
 
-/* Header Breakpoint at 960px
---------------------------------------------- */
+.site-header .search-form {
+  float: right;
+  margin-top: 12px;
+  width: 288px;
+}
+
+// Title Area
+
+.title-area {
+  float: left;
+  padding: 20px 0;
+}
+
+.site-title a img {
+  vertical-align: top;
+}
+
+.site-title {
+  margin-bottom: 0;
+}
+
+// Header Breakpoint at 960px
+
 
 @include media($large-screen-up) {
   .site-header .search-form {
     float: none;
-	text-align: center;
-	margin: 16px auto;
+    margin: 16px auto;
+    text-align: center;
   }
 
   .site-description,
   .site-title {
-	text-align: center;
+    text-align: center;
   }
 
 }
 
-/* Header Breakpoint at 768px
---------------------------------------------- */
+// Header Breakpoint at 768px
 
 @include media($small-screen-up) {
   .title-area {
-    float:         none;
+    float: none;
     padding-right: 0;
   }
 

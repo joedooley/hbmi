@@ -48,6 +48,7 @@ select[multiple=multiple] {
     border-color: $action-color;
     box-shadow: $form-box-shadow-focus;
     outline: none;
+    color: transparent;
   }
 
   &:disabled {
@@ -87,4 +88,8 @@ select {
   margin-bottom: $base-spacing;
   max-width: 100%;
   width: auto;
+}
+
+.search-form {
+  overflow: hidden;
 }
