@@ -1,0 +1,35 @@
+/* ## Footer Widgets
+-------------------------------------- */
+
+.footer-widgets {
+  background-image: url("/wp-content/themes/hbmi-theme/assets/images/footer-bg.png");
+  width:            1500px;
+  height:           600px;
+  background-size:  cover;
+}
+
+.footer-widgets .wrap {
+  padding-top: 2em;
+}
+
+.footer-widgets a,
+.footer-widgets p {
+  font-family: 'cooper_hewittbook';
+  font-style:  normal;
+  color:       #fff;
+}
+
+.home .gfield_label {
+  color: #96c93d;
+}
+
+.home .gform_wrapper .top_label input.medium,
+.home .gform_wrapper .top_label select.medium {
+  width:   100%;
+  padding: 15px 0;
+}
+
+.gform_wrapper .gform_footer input.button {
+  background: #96c93d;
+}
+

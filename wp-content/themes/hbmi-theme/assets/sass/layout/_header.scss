@@ -1,0 +1,38 @@
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+  position:   fixed;
+  z-index:    999;
+  width:      100%;
+  background: rgba(255, 255, 255, .6);
+  text-align: right;
+}
+
+/* Header Breakpoint at 960px
+--------------------------------------------- */
+
+@include media($large-screen-up) {
+  .site-header .search-form {
+    float: none;
+	text-align: center;
+	margin: 16px auto;
+  }
+
+  .site-description,
+  .site-title {
+	text-align: center;
+  }
+
+}
+
+/* Header Breakpoint at 768px
+--------------------------------------------- */
+
+@include media($small-screen-up) {
+  .title-area {
+    float:         none;
+    padding-right: 0;
+  }
+
+}

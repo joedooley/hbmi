@@ -6,13 +6,13 @@
 // $column: 90px;
 // $gutter: 30px;
 // $grid-columns: 12;
-// $max-width: 1200px;
+   $max-width: 1280px;
 
 // Neat Breakpoints
-$small-screen: 768px;
-$medium-screen: 800px;
-$large-screen: 900px;
-$xlarge-screen: 1200px;
+$small-screen: em(768px);
+$medium-screen: em(800px);
+$large-screen: em(960px);
+$xlarge-screen: em(1200px);
 
 $small-screen-up: new-breakpoint(max-width $small-screen 4);
 $medium-screen-up: new-breakpoint(max-width $medium-screen 4);

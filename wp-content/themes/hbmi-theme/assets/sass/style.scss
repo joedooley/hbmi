@@ -13,14 +13,23 @@
  * Base CSS
  */
 
+@import "base/genesis-columns";
+@import "base/accessibility";
+
+
 
 /**
  * Main layout
  *
  */
 
+@import "layout/header";
 @import 'layout/navigation';
 @import 'components/mobile-navigation';
 @import 'pages/home';
 @import 'layout/index';
+@import "components/pagination";
+@import "base/comments";
+@import 'layout/footer';
+
 

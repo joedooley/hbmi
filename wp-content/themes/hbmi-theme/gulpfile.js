@@ -122,7 +122,7 @@ gulp.task('styles', function () {
                         }))
                         .pipe(gulp.dest('/'))
                       //.pipe(reload({stream:true})) // Inject Styles when min style file is created
-                        .pipe(notify({ message: 'Styles task complete', onLast: true }))
+                        .pipe(notify({ message: 'Styles task complete', onLast: true }));
 });
 
 

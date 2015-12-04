@@ -1,0 +1,55 @@
+/* ## Pagination
+--------------------------------------------- */
+
+.pagination {
+  clear:  both;
+  @include margin(40px 0)
+}
+
+.adjacent-entry-pagination {
+  margin-bottom: 0;
+}
+
+.archive-pagination li {
+  display: inline;
+}
+
+.archive-pagination li a {
+  background-color: #333;
+  color:            #fff;
+  cursor:           pointer;
+  display:          inline-block;
+  font-size:        .9em;
+  padding:          8px 12px;
+  text-decoration:  none;
+
+  &:hover,
+  &:focus,
+  .archive-pagination .active a {
+	background-color: #c3251d;
+	text-decoration: underline;
+  }
+}
+
+
+@include media($medium-screen-up) {
+
+  .archive-description,
+  .author-box,
+  .comment-respond,
+  .entry,
+  .entry-comments,
+  .entry-pings,
+  .sidebar .widget,
+  .site-header {
+	padding: 0;
+  }
+
+  .archive-pagination li a {
+	margin-bottom: 4px;
+  }
+
+}
+
+
+
