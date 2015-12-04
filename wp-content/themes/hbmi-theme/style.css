@@ -1226,6 +1226,59 @@ p.entry-meta {
   content: "\2014";
   margin: 0 6px 0 2px; }
 
+/* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+.sidebar {
+  margin-top: 15px;
+  font-size: 1.6rem; }
+
+.sidebar p:last-child,
+.sidebar ul > li:last-child {
+  margin-bottom: 0; }
+
+.sidebar .widget {
+  padding: 0 40px 0; }
+
+/* # Media Queries
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  .site-inner,
+  .wrap {
+    max-width: 960px; }
+
+  .content-sidebar-sidebar .content-sidebar-wrap,
+  .sidebar-content-sidebar .content-sidebar-wrap,
+  .sidebar-sidebar-content .content-sidebar-wrap {
+    width: 740px; }
+
+  .content {
+    width: 620px; }
+
+  .sidebar-content-sidebar .content,
+  .sidebar-sidebar-content .content,
+  .content-sidebar-sidebar .content {
+    width: 400px; }
+
+  .sidebar-primary {
+    width: 300px; } }
+@media only screen and (max-width: 960px) {
+  .site-inner,
+  .wrap {
+    max-width: 800px; }
+
+  .site-inner {
+    padding: 12em 1em 0; }
+
+  .content,
+  .content-sidebar-sidebar .content,
+  .content-sidebar-sidebar .content-sidebar-wrap,
+  .sidebar-content-sidebar .content,
+  .sidebar-content-sidebar .content-sidebar-wrap,
+  .sidebar-primary,
+  .sidebar-secondary,
+  .sidebar-sidebar-content .content,
+  .sidebar-sidebar-content .content-sidebar-wrap {
+    width: 100%; } }
 /* ## Pagination
 --------------------------------------------- */
 .pagination {
@@ -1246,13 +1299,24 @@ p.entry-meta {
   font-size: .9em;
   padding: 8px 12px;
   text-decoration: none; }
+  .archive-pagination li a:hover, .archive-pagination li a:focus,
+  .archive-pagination li a .archive-pagination .active a {
+    background-color: #c3251d;
+    text-decoration: underline; }
 
-.archive-pagination li a:hover,
-.archive-pagination li a:focus,
-.archive-pagination .active a {
-  background-color: #c3251d;
-  text-decoration: underline; }
+@media screen and (max-width: 50em) {
+  .archive-description,
+  .author-box,
+  .comment-respond,
+  .entry,
+  .entry-comments,
+  .entry-pings,
+  .sidebar .widget,
+  .site-header {
+    padding: 0; }
 
+  .archive-pagination li a {
+    margin-bottom: 4px; } }
 /* ## Comments
 --------------------------------------------- */
 .comment-respond,
@@ -1307,72 +1371,6 @@ li.comment {
   font-size: .9em;
   padding: 24px; }
 
-/* # Sidebars
----------------------------------------------------------------------------------------------------- */
-.sidebar {
-  margin-top: 15px;
-  font-size: 1.6rem; }
-
-.sidebar p:last-child,
-.sidebar ul > li:last-child {
-  margin-bottom: 0; }
-
-.sidebar .widget {
-  padding: 0 40px 0; }
-
-/* # Media Queries
----------------------------------------------------------------------------------------------------- */
-@media only screen and (max-width: 1200px) {
-  .site-inner,
-  .wrap {
-    max-width: 960px; }
-
-  .content-sidebar-sidebar .content-sidebar-wrap,
-  .sidebar-content-sidebar .content-sidebar-wrap,
-  .sidebar-sidebar-content .content-sidebar-wrap {
-    width: 740px; }
-
-  .content {
-    width: 620px; }
-
-  .sidebar-content-sidebar .content,
-  .sidebar-sidebar-content .content,
-  .content-sidebar-sidebar .content {
-    width: 400px; }
-
-  .sidebar-primary {
-    width: 300px; } }
-@media only screen and (max-width: 960px) {
-  .site-inner,
-  .wrap {
-    max-width: 800px; }
-
-  .site-inner {
-    padding: 12em 1em 0; }
-
-  .content,
-  .content-sidebar-sidebar .content,
-  .content-sidebar-sidebar .content-sidebar-wrap,
-  .sidebar-content-sidebar .content,
-  .sidebar-content-sidebar .content-sidebar-wrap,
-  .sidebar-primary,
-  .sidebar-secondary,
-  .sidebar-sidebar-content .content,
-  .sidebar-sidebar-content .content-sidebar-wrap {
-    width: 100%; } }
-@media only screen and (max-width: 800px) {
-  .archive-description,
-  .author-box,
-  .comment-respond,
-  .entry,
-  .entry-comments,
-  .entry-pings,
-  .sidebar .widget,
-  .site-header {
-    padding: 0; }
-
-  .archive-pagination li a {
-    margin-bottom: 4px; } }
 /* ## Footer Widgets
 -------------------------------------- */
 .footer-widgets {
