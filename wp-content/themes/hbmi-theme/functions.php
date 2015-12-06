@@ -20,14 +20,9 @@ add_action( 'wp_enqueue_scripts', 'hbmi_custom_scripts_styles' );
  *
  */
 function hbmi_custom_scripts_styles() {
-
 	wp_enqueue_style( 'font-styles', get_stylesheet_directory_uri() . '/assets/fonts/stylesheet.css', CHILD_THEME_VERSION );
-
 	wp_enqueue_script( 'customjs', get_stylesheet_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
-
 	wp_enqueue_script( 'vendorsjs', get_stylesheet_directory_uri() . '/assets/js/vendors.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
-
-
 }
 
 
@@ -43,25 +38,8 @@ function hbmi_add_theme_support() {
 		add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
 		add_theme_support( 'genesis-responsive-viewport' );
 		add_theme_support( 'genesis-after-entry-widget-area' );
-
-		// Add Accessibility support
-		// add_theme_support( 'genesis-accessibility', array( 'headings', 'drop-down-menu', 'search-form',
-	// 'hbmiip-links', 'rems' ) );
 		add_theme_support( 'genesis-accessibility', array( 'headings', 'search-form', 'hbmiip-links', 'rems' ) );
-
-
-
-
-	// Remove wrap from .site-inner
-		add_theme_support( 'genesis-structural-wraps', array(
-		  'header',
-		//'nav',
-		//'subnav',
-		// 'site-inner',
-			'footer-widgets',
-			'footer'
-		));
-
+		add_theme_support( 'genesis-structural-wraps', array( 'header', 'footer-widgets', 'footer' ) );
 }
 
 
@@ -94,7 +72,6 @@ add_filter( 'theme_page_templates', 'hbmi_remove_genesis_page_templates' );
  * @return array
  */
 function hbmi_remove_genesis_page_templates( $page_templates ) {
-	//unset( $page_templates['page_archive.php'] );
 	unset( $page_templates['page_blog.php'] );
 	return $page_templates;
 }
@@ -105,19 +82,14 @@ function hbmi_remove_genesis_page_templates( $page_templates ) {
 unregister_sidebar( 'header-right' );
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );
-add_theme_support( 'genesis-structural-wraps', array( 'header', 'menu-secondary', 'footer-widgets', 'footer' ) );
-
-
 
 /**
- * Adds a css class to the body element
- *
- * @param  array $classes the current body classes
- * @return array $classes modified classes
+ * @param $name
+ * To use this function add this in template with svg
+ * file name, inline_svg($name);
  */
-function hbmi_gf_body_class( $classes ) {
-	$classes[] = 'form-submitted';
-	return $classes;
+function inline_svg( $name ) {
+	$file = get_stylesheet_directory_uri();
+	$file .= '/assets/images/' . $name . '.svg';
+	include( $file );
 }
-
-

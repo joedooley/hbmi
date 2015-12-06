@@ -1,5 +1,4 @@
-// Site Navigation: Includes Primary
-// Navigation, .genesis-nav-menu
+// Site Navigation: Includes Primary Navigation, .genesis-nav-menu
 .genesis-nav-menu .menu-item {
   display: inline-block;
   text-align: left;
@@ -8,7 +7,7 @@
 .genesis-nav-menu a {
   display: block;
   font-family: $cooper-medium;
-  font-size: 2rem;
+  font-size: $base-font-size;
   padding: 30px 20px;
 }
 
@@ -102,11 +101,25 @@
 
 .nav-primary {
   padding-top: 2em;
+
+  @include media($small-screen-up) {
+    padding-top: 0;
+  }
 }
 
 .nav-primary .genesis-nav-menu a {
-  color: #5c666f;
+  color: $dark-gray;
   text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background-color: $light-gray;
+    color: $white;}
+
+  &:hover {
+    @include transition(opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
+  }
+
 }
 
 // Navigation Breakpoint at 960px

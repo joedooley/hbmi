@@ -5,7 +5,7 @@
  * @since 1.0.0
  * @authors Joe Dooley
  * @package hbmi
- * 
+ *
  */
 
 // Project configuration
@@ -62,7 +62,9 @@ var gulp            = require('gulp'),
     zip             = require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
     plumber         = require('gulp-plumber'),
     cache           = require('gulp-cache'),
-    sourcemaps      = require('gulp-sourcemaps');
+    sourcemaps      = require('gulp-sourcemaps'),
+    svgstore        = require('gulp-svgstore'),
+    svgmin          = require('gulp-svgmin');
 
 /**
  * Browser Sync
@@ -179,15 +181,30 @@ gulp.task('images', function() {
   return  gulp.src('./assets/images/raw/*.png')
         .pipe(newer('assets/images/'))
         .pipe(rimraf({ force: true }))
-        .pipe(imagemin({ 
+        .pipe(imagemin({
             optimizationLevel: 7,
             progressive: true,
             interlaced: true,
-            use: [pngquant()]
+            use: [pngquant()],
+            svgoPlugins: [{removeViewBox: false}, {removeUselessStrokeAndFill: false}]
         }))
         .pipe(gulp.dest('./assets/images/'))
         .pipe( notify( { message: 'Images task complete', onLast: true } ) );
 });
+
+
+/**
+ * SVG spriting with Gulp SVGstore
+ */
+
+gulp.task('spritesvg', function () {
+    return gulp.src('./assets/images/svg/sprite-src/*.svg')
+        .pipe(svgstore())
+        .pipe(rename("svgsprite.svg"))
+        .pipe(gulp.dest('./assets/images/svg/sprite/'))
+        .pipe(notify({message: 'SVG sprite created'}));
+});
+
 
 
 /**
@@ -239,7 +256,7 @@ gulp.task('buildFiles', function() {
 * Look at assets/images, optimize the images and send them to the appropriate place
 */
 gulp.task('buildImages', function() {
-  return  gulp.src(['assets/images', '!assets/images/raw'])
+  return  gulp.src(['assets/images', '!assets/images/raw', '!assets/images/svg/sprite-src'])
     .pipe(gulp.dest(build+'assets/images'))
     .pipe(plugins.notify({ message: 'Images copied to buildTheme folder', onLast: true }));
 });
@@ -269,7 +286,8 @@ return  gulp.src(build+'/**/')
 
 // Package Distributable Theme
 gulp.task('images', function(cb) {
-gulp.watch('./assets/images/raw/**/*', ['images']); 
+    gulp.watch('./assets/images/raw/**/*', ['images']);
+    gulp.watch('./assets/images/svg/sprite-src/*', ['spritesvg']);
 });
 
 // Package Distributable Theme
@@ -280,7 +298,7 @@ runSequence('styles', 'cleanup', 'vendorsJs', 'scriptsJs',  'buildFiles', 'build
 
 // Watch Task
 gulp.task('default', ['styles', 'vendorsJs', 'scriptsJs'], function () {
-gulp.watch('./assets/images/raw/**/*', ['images']); 
+gulp.watch('./assets/images/raw/**/*', ['images']);
 gulp.watch('./assets/sass/*.scss', ['styles']);
 gulp.watch('./assets/js/**/*.js', ['scriptsJs']);
 });

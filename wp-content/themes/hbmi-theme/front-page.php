@@ -8,6 +8,9 @@
  */
 
 // Function displaying Flexible Content Field
+/**
+ *
+ */
 function hbmi_display_fc() {
 
 	// loop through the rows of data
@@ -18,7 +21,8 @@ function hbmi_display_fc() {
 
 				$bg_image = get_sub_field( 'hero_image' ); ?>
 
-				<div class=" hero <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $bg_image['url']; ?>); background-size: cover;">
+				<div class=" hero <?php the_sub_field( 'css_class' ); ?>" style="background-image: url(<?=
+				$bg_image['url']; ?>);">
 					<div class="hero-inner">
 						<div class="hero-copy">
 								<?php if ( get_sub_field( 'hero_content' ) ) :
@@ -36,14 +40,12 @@ function hbmi_display_fc() {
 				<section class="row-wrapper <?= the_sub_field( 'css_class' ); ?>" style="background-color: <?= $bg_color; ?>;">
 					<div class="outer-container">
 						<div class="section-wrap">
-							<div class="heading-wrap">
+							<div class="section-copy">
 								<h2 class="section-heading">
 									<?php if ( get_sub_field( 'section_heading' ) ) :
 										the_sub_field( 'section_heading' );
 									endif; ?>
 								</h2>
-							</div>
-							<div class="content-area">
 								<?php if ( get_sub_field( 'content_area' ) ) :
 									the_sub_field( 'content_area' );
 								endif; ?>
@@ -57,12 +59,31 @@ function hbmi_display_fc() {
 
 				$background_image = get_sub_field( 'background_image' ) ? get_sub_field( 'background_image' ) : ''; ?>
 
-				<section class="row content-section <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $background_image['url']; ?>); background-size: cover;">
-					<div class="wrap">
-						<div class="content-area">
+				<section class="row content-section <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $background_image['url']; ?>);">
+					<div class="outer-container">
+						<div class="section-copy">
 							<?php if ( get_sub_field( 'content_area' ) ) :
 								the_sub_field( 'content_area' );
 							endif; ?>
+						</div>
+					</div>
+				</section>
+
+			<?php } elseif ( get_row_layout() === 'our_services_section' ) {
+
+				$bg_color = get_sub_field( 'background_color' ); ?>
+
+				<section class="row content-section <?php the_sub_field( 'css_class' ); ?>"  style="background-color: <?= $bg_color; ?>;">
+					<div class="outer-container" >
+						<div class="section-copy" >
+							<h2 class="section-heading" >
+								<?php if ( get_sub_field( 'section_heading' ) ) :
+									the_sub_field( 'section_heading' );
+								endif; ?>
+							</h2>
+							<?php
+							get_template_part( 'assets/views/partials/home', 'icons' );
+							?>
 						</div>
 					</div>
 				</section>
@@ -78,7 +99,9 @@ function hbmi_display_fc() {
 add_action( 'get_header', 'hbmi_fc_check' );
 function hbmi_fc_check() {
 	// If "Flexible Content" field has rows of data
-	if( ! is_admin() ) {
+	if ( ! is_admin() ) {
+
+		add_action( 'genesis_before_header', 'hbmi_svgsprite' );
 
 		// Force full width content
 		add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
@@ -95,9 +118,25 @@ function hbmi_fc_check() {
 	}
 }
 
+/**
+ * Adds .flexible-content to the body class on the homepage
+ * @param $classes
+ *
+ * @return array
+ */
 function hbmi_body_class( $classes ) {
 	$classes[] = 'flexible-content';
 	return $classes;
+}
+
+/**
+ * Hidden Div for SVG Sprite Sheet
+ */
+function hbmi_svgsprite() {
+	( is_front_page() );
+		echo '<div class="hidden">';
+			echo file_get_contents( get_stylesheet_directory_uri() . "/assets/images/svg/sprite/svgsprite.svg" );
+		echo '</div>';
 }
 
 

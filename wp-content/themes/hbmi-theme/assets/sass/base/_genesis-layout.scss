@@ -185,7 +185,8 @@
   }
 }
 
-@include media($medium-screen) {
+@include media($medium-screen-up) {
+
   .site-inner,
   .wrap {
     max-width: 800px;

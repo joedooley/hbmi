@@ -6,7 +6,7 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: $base-font-family;
+  font-family: $cooper-bold;
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
@@ -17,6 +17,7 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  text-transform: uppercase;
 
   &:hover,
   &:focus {
