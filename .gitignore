@@ -1,6 +1,5 @@
-# Vagrant WordPress #
-#####################
-wp-config.php
+# WordPress #
+############
 wp-config-local.php
 wp-content/uploads
 wp-content/blogs.dir/
@@ -8,27 +7,9 @@ wp-content/upgrade/
 wp-content/backup-db/
 wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
-wp-content/debug.log
 sitemap.xml
 sitemap.xml.gz
 *.log
-wp-content/themes/hbmi-theme/.idea
-wp-content/themes/hbmi-theme/hbmi-theme.zip
-wp-content/themes/hbmi-theme/style.css.map
-
-wp-content/themes/hbmi-theme/.idea
-wp-content/themes/hbmi-theme/hbmi-theme.zip
-wp-content/themes/hbmi-theme/dist
-wp-content/themes/hbmi-theme/style.css.map
-
-# Package Managers #
-####################
-
-wp-content/themes/hbmi-theme/bower_components
-wp-content/themes/hbmi-theme/node_modules
-wp-content/themes/hbmi-theme/vendor
-vendor
-
 
 # @TODO writable paths
 wp-content/cache/
@@ -36,7 +17,7 @@ wp-content/backups/
 
 
 # Packages #
-#############
+############
 *.7z
 *.dmg
 *.gz
@@ -68,7 +49,3 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
-
-# Phpstorm #
-###########3
-.idea

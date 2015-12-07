@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c6a6d843-75c6-487d-b901-0b9b9713c42a" name="hbmi-local.dev" url="http://hbmi-local.dev/">
+        <fileTransfer mountedRoot="$PROJECT_DIR$/../../../phpdebug" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
