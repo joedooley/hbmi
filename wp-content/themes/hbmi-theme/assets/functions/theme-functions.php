@@ -3,7 +3,7 @@
  * Theme Functions
  * @author    Joe Dooley
  * @package   HBMI Theme
- * 
+ *
  */
 
 /**********************************
@@ -27,8 +27,9 @@ if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 add_filter( 'genesis_seo_title', 'hbmi_header_inline_logo', 10, 3 );
 function hbmi_header_inline_logo( $title, $inside, $wrap ) {
 
-	$logo = '<img src="' . get_stylesheet_directory_uri() . '/assets/images/logo@2x.png" alt="' . esc_attr( get_bloginfo(
-					'name' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" width="384" height="159" />';
+	$logo = '<img src="' . get_stylesheet_directory_uri() . '/assets/images/svg/logo.svg" alt="' . esc_attr(
+			get_bloginfo(
+					'name' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" width="315" height="130" />';
 
 	$inside = sprintf( '<a href="%s" title="%s">%s</a>', trailingslashit( home_url() ), esc_attr( get_bloginfo( 'name' ) ), $logo );
 
@@ -46,8 +47,6 @@ function hbmi_header_inline_logo( $title, $inside, $wrap ) {
 }
 
 
-//* Customize the footer
-remove_action( 'genesis_footer', 'genesis_do_footer' );
 
 
 

@@ -26,13 +26,13 @@
 
 
 @include media($small-screen-up) {
-	.genesis-nav-menu.responsive-menu > .menu-item > .sub-menu,
-	.genesis-nav-menu.responsive-menu {
+	ul.genesis-nav-menu.responsive-menu > .menu-item > .sub-menu,
+	ul.genesis-nav-menu.responsive-menu {
 		display: none;
 		background-color: $dark-gray;
 	}
 
-	.genesis-nav-menu.responsive-menu .menu-item,
+	ul.genesis-nav-menu.responsive-menu .menu-item,
 	.responsive-menu-icon {
 		display: block;
 	}
@@ -61,7 +61,7 @@
 	.nav-primary .genesis-nav-menu.responsive-menu .current-menu-item > a,
 	.nav-primary .genesis-nav-menu.responsive-menu .sub-menu .current-menu-item > a:hover,
 	.nav-primary .genesis-nav-menu.responsive-menu a:hover {
-		color: $light-gray;
+		color: $green;
 	}
 
 	.genesis-nav-menu.responsive-menu .menu-item-has-children {

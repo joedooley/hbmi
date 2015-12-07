@@ -8,50 +8,34 @@
   z-index: 999;
 }
 
-.site-header .search-form {
-  float: right;
-  margin-top: 12px;
-  width: 288px;
-}
 
 // Title Area
 
 .title-area {
   float: left;
-  padding: 20px 0;
-}
+  padding-top: em(20);
 
-.site-title a img {
-  vertical-align: top;
-}
-
-.site-title {
-  margin-bottom: 0;
-}
-
-// Header Breakpoint at 960px
-
-
-@include media($large-screen-up) {
-  .site-header .search-form {
-    float: none;
-    margin: 16px auto;
-    text-align: center;
-  }
-
-  .site-description,
-  .site-title {
-    text-align: center;
-  }
-
-}
-
-// Header Breakpoint at 768px
-
-@include media($small-screen-up) {
-  .title-area {
+  @include media($small-screen-up) {
     float: none;
     padding-right: 0;
+    text-align: $text-center;
   }
-
 }
+
+
+// Shring logo by 75% between 768px and 960px so the menu
+// has room as the page scales down. This is the only way to
+// stop the menu from breaking into two rows.
+
+@include media($large-screen-up) {
+  .site-title a img {
+    width: em(250);
+
+    @include media($small-screen-up-min) {
+      width: em(200);
+    }
+  }
+}
+
+
+

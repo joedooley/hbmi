@@ -1,7 +1,7 @@
 // Importing Bourbon, Neat, Refills and _grid_settings.scss
 @import "vendors/sanitize.css/sanitize";
 @import "vendors/bourbon/bourbon";
-//@import "base/grid-settings";
+@import "base/grid-settings";
 @import "vendors/neat/neat";
 @import "base/base";
 
@@ -10,17 +10,10 @@
 
 
 // Main layout
-@import "layout/header";
-@import "layout/navigation";
-@import "components/mobile-navigation";
-@import "components/widgets";
-@import "pages/archives";
-@import "layout/sidebar";
-@import "pages/home";
-@import "layout/index";
-@import "components/pagination";
-@import "components/author";
-@import "base/comments";
-@import "layout/footer";
+@import "pages/pages";
+@import "components/components";
+@import "layout/layout";
+
+
 
 

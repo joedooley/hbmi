@@ -59,7 +59,7 @@ function hbmi_display_fc() {
 
 				$background_image = get_sub_field( 'background_image' ) ? get_sub_field( 'background_image' ) : ''; ?>
 
-				<section class="row content-section <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $background_image['url']; ?>);">
+				<section class="row-wrapper <?php the_sub_field( 'css_class' ); ?>" style="background: url(<?= $background_image['url']; ?>);">
 					<div class="outer-container">
 						<div class="section-copy">
 							<?php if ( get_sub_field( 'content_area' ) ) :
@@ -73,7 +73,7 @@ function hbmi_display_fc() {
 
 				$bg_color = get_sub_field( 'background_color' ); ?>
 
-				<section class="row content-section <?php the_sub_field( 'css_class' ); ?>"  style="background-color: <?= $bg_color; ?>;">
+				<section class="row-wrapper <?php the_sub_field( 'css_class' ); ?>"  style="background-color: <?= $bg_color; ?>;">
 					<div class="outer-container" >
 						<div class="section-copy" >
 							<h2 class="section-heading" >

@@ -1,50 +1,42 @@
 .hidden {
-	display: none;
+  display: none;
 }
 
-.home .site-inner {
-  max-width: none;
+.home .site-inner{
+	max-width: none;
 }
 
 .hero {
-	$base-border-radius: 3px !default;
-	$action-color: #477dca !default;
-	$large-screen: em(860) !default;
-	$hero-background-top: #7f99be;
-	$hero-background-bottom: #20392b;
-	$gradient-angle: 10deg;
+  @include background(no-repeat scroll);
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 3em;
+  min-height: em(500);
 
-	@include background(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-	background-color: #324766;
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding-bottom: 3em;
-	min-height: em(500px);
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    margin: auto;
+    padding: 3.5em;
+    text-align: center;
 
-	.hero-inner {
-		@include outer-container;
-		@include clearfix;
-		margin: auto;
-		padding: 3.5em;
-		text-align: center;
+    .hero-copy {
+      text-align: center;
 
-		.hero-copy {
-			text-align: center;
+      h1 {
+        color: $white;
+        font-size: $section-heading;
+        margin-bottom: 0.5em;
+        @include transform(translateY(200px));
+        float: right;
 
-			h1 {
-				color: $dark-gray;
-				font-size: $large-heading-font-size;
-				margin-bottom: 0.5em;
-				@include transform(translateY(200px));
-				float: right;
-
-				@include media($large-screen) {
-					font-size: 3em;
+        @include media($small-screen-up) {
+          float: none;
+					font-size: $medium-font-size + 0.5em;
 				}
-			}
-		}
-	}
+      }
+    }
+  }
 }
 
 
@@ -52,113 +44,204 @@
 // General Page Elements
 
 .row-wrapper {
-  @include row();
+ // @include row();
 
   .outer-container {
-  @include outer-container;
+  //@include outer-container;
   }
 }
 
+.section-copy {
+    padding: 1.5em;
+}
+
+
 // What We Do
 .what-we-do-section {
-	min-height: em(400px);
-	border-top: $section-border;
+  min-height: em(400);
+  border-top: $section-border;
 
-	.section-heading {
-		color: $green;
-	}
+  .section-heading {
+    color: $green;
+  }
 }
 
 .section-heading {
-	font-family: $base-font-family;
-	font-size: $section-heading;
-	text-align: $text-center;
-	padding-top: 1em;
+  font-family: $base-font-family;
+  font-size: $section-heading;
+  text-align: $text-center;
+  padding-top: 1em;
+
+	@include media($xsmall-screen-up) {
+		padding-top: 0;
+	}
 }
 
 // Our Services
 .our-services-section {
-	min-height: em(750px);
-	border-top: $section-border;
+  min-height: em(750);
+  border-top: $section-border;
 
-	.section-heading {
-		color: $white;
-		margin-bottom: 0;
+  .section-heading {
+    color: $white;
+    margin-bottom: 0;
+
+		@include media($xsmall-screen-up) {
+			padding-bottom: 0.5em;
+		}
+  }
+
+	@include media($xsmall-screen-up) {
+		min-height: em(1400);
+	}
+}
+
+.icon-map .list-icon:nth-child(2) {
+	padding-top: em(70);
+
+	@include media($xsmall-screen-up) {
+		padding-top: 0;
 	}
 }
 
 .icon-container {
-	text-align: $text-center;
-	@include row();
+  text-align: $text-center;
 
-	.icon-map {
-		@include span-columns(12);
-		@include shift(1.5);
+  .icon-map {
+    @include span-columns(12);
 
-		.list-icon {
-			display: inline-block;
-			@include span-columns(3 of 12);
-
-			.list-icon:nth(2n+1) {
-				padding-top: 2em;
-			}
+    .list-icon {
+			@include span-columns(4 of 12);
 		}
 	}
 
-	.icon-map-2 {
-		@include span-columns(6);
-		@include shift(3);
+  .icon-map-2 {
+    @include span-columns(12);
+    @include shift(2);
+
+    .list-icon {
+      @include span-columns(2 of 6);
+    }
+  }
+}
+
+@include media($large-screen-up) {
+	 .icon {
+		width: 75%;
+	}
+}
+
+@include media($xsmall-screen-up) {
+	.icon-container .icon-map,
+	.icon-container .icon-map-2 {
+		@include fill-parent;
+		@include shift(0);
+		@include span-columns(2);
 
 		.list-icon {
-			@include span-columns(3 of 6);
-
+			@include fill-parent;
+			@include span-columns(2 of 2);
 		}
 	}
+}
+
+.list-icon {
+	opacity: 0.4;
+}
+
+.icon-name {
+	text-transform: uppercase;
+	color: $white;
+	font-family: $heading-font-family;
+	font-size: $small-heading;
+	line-height: $heading-line-height;
+	padding: 1rem;
+}
+
+.list-icon:hover {
+	opacity: 1;
 }
 
 // Equation Section
 .equation-section {
-	border-top: $section-border;
-	color: $white;
-	min-height: em(600px);
-	text-align: $text-center;
+  border-top: $section-border;
+  color: $white;
+  min-height: em(600);
+  text-align: $text-center;
 
-	.section-copy {
-		@include transform(translateY(225px));
-	}
+  .section-copy {
+    @include transform(translateY(175px));
+  }
 
-	.large-quotes {
-		font-family: $cooper-semibold-italic;
-		font-size: $large-heading-font-size;
-	}
+  .large-quotes {
+    font-family: $cooper-semibold-italic;
+    font-size: $section-heading + 1em;
+  }
 }
 
 .equation,
 .equation-container p {
-	font-size: $medium-font-size;
 	display: inline-block;
 	font-family: $cooper-bold;
+	font-size: $medium-font-size;
 
-	.large-plus,
-	.large-equal-sign {
-		color: $green;
-		@include padding(null em(7.5px));
-		font-size: $medium-font-size + 0.2;
-		vertical-align: middle;
+  .large-plus,
+  .large-equal-sign {
+    color: $green;
+    @include padding(null em(7.5));
+    font-size: $medium-font-size + 0.2;
+    vertical-align: middle;
+  }
+}
+
+@include media($large-screen-up) {
+	.equation-section .section-copy {
+		@include transform(translateY(100px));
+
+		@include media($small-screen-up) {
+			@include transform(translateY(25px));
+
+		}
+	}
+}
+
+@include media($small-screen-up) {
+	.large-quotes {
+		font-size: $section-heading;
+	}
+
+	@include media($xsmall-screen-up) {
+		.equation-section {
+			min-height: 0;
+
+			.large-quotes {
+				font-size: $medium-font-size + 1em;
+			}
+		}
+
+		.equation-container {
+			display: none;
+		}
 	}
 }
 
 // Testimonials Section
 
 .testimonials-section {
-	min-height: 400px;
-	text-align: $text-center;
-	border-top: $section-border;
-	border-bottom: $section-border;
+  min-height: em(400);
+  text-align: $text-center;
+  border-top: $section-border;
+  border-bottom: $section-border;
 
-	p {
-		font-family: $cooper-semibold-italic;
-		color: $green;
-		font-size: em(25px);
-	}
+  p {
+    font-family: $cooper-semibold-italic;
+    color: $green;
+    font-size: em(25);
+
+		@include media($xsmall-screen-up) {
+			font-size: $base-font-size;
+			line-height: 2;
+			text-align: left;
+		}
+  }
 }

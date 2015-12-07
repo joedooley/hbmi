@@ -1,4 +1,6 @@
 <?php
+
+
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'hbmi-local');
@@ -38,7 +40,6 @@ define('SCRIPT_DEBUG', true);
 define('JETPACK_DEV_DEBUG', true);
 
 
-
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
@@ -47,3 +48,4 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+

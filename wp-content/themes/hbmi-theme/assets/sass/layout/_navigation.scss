@@ -21,7 +21,6 @@
 }
 
 .genesis-nav-menu .sub-menu a {
-  background-color: #fff;
   border: 1px solid #eee;
   border-top: 0;
   color: #fff;
@@ -137,7 +136,7 @@
   .genesis-nav-menu a,
   .genesis-nav-menu > .first > a,
   .genesis-nav-menu > .last > a {
-    padding: 20px 16px;
+    padding: em(20) em(7);
   }
 
   .genesis-nav-menu li.right {
@@ -154,3 +153,13 @@
 
 }
 
+.nav-primary .genesis-nav-menu {
+  @include align-items(stretch);
+  @include display(inline-flex);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+
+  .menu-item > a {
+    @include flex(1);
+  }
+}

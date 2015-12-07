@@ -64,7 +64,8 @@ var gulp            = require('gulp'),
     cache           = require('gulp-cache'),
     sourcemaps      = require('gulp-sourcemaps'),
     svgstore        = require('gulp-svgstore'),
-    svgmin          = require('gulp-svgmin');
+    svgmin          = require('gulp-svgmin'),
+    rsync           = require('gulp-rsync');
 
 /**
  * Browser Sync
@@ -275,6 +276,20 @@ return  gulp.src(build+'/**/')
   .pipe(notify({ message: 'Zip task complete', onLast: true }));
 });
 
+/**
+ * Sending Distribution files to Pantheon via rsync
+ *
+ * Takes the dist folder and syncs to Pantheon
+ */
+/*gulp.task('deploy', function () {
+    gulp.src('build/**')
+        .pipe(rsync({
+            root       : 'build',
+            hostname   : 'example.com',
+            destination: '/path/to/site'
+        }));
+});*/
+
 
 // ==== TASKS ==== //
 /**
@@ -294,6 +309,9 @@ gulp.task('images', function(cb) {
 gulp.task('build', function(cb) {
 runSequence('styles', 'cleanup', 'vendorsJs', 'scriptsJs',  'buildFiles', 'buildImages', 'buildZip','cleanupFinal', cb);
 });
+
+// Gulp rsync
+gulp.task('deploy', ['rsync']);
 
 
 // Watch Task

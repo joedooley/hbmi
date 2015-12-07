@@ -1,4 +1,6 @@
 {
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
         "phpunit/phpunit-selenium": "^1.4",
         "phpunit/dbunit": "> 1.2",

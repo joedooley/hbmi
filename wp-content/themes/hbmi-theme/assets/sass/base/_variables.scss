@@ -8,17 +8,17 @@ $base-font-family: $cooper-book;
 $heading-font-family: $cooper-bold;
 
 // Font Sizes
-$base-font-size: em(18px);
-$large-heading-font-size: 4em;
-$section-heading: 3em;
+$base-font-size: em(18);
+$section-heading: 3.5em;
 $medium-font-size: 2em;
+$small-heading: 1.5em;
 
 // Line height
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$base-border-radius: 3px;
+$base-border-radius: em(3px);
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;

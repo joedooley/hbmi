@@ -1,11 +1,4 @@
 // Footer Widgets
-.footer-widgets {
-  background-image: url("/wp-content/themes/hbmi-theme/assets/images/footer-bg.png");
-  background-size: cover;
-  height: 600px;
-  width: 1500px;
-}
-
 .footer-widgets .wrap {
   padding-top: 2em;
 }
@@ -27,9 +20,12 @@
 }
 
 .gform_wrapper .gform_footer input.button {
-  background: #96c93d;
+  background: $green;
 }
 
-.site-footer {
-  display: none;
+div.footer-widgets {
+  background-image: url("/wp-content/themes/hbmi-theme/assets/images/footer-bg.png");
+  background-size: cover;
+  min-height: em(500);
+  @include outer-container(100%);
 }
