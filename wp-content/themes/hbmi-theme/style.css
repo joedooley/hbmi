@@ -504,6 +504,39 @@ img.alignright,
 .entry-content .wp-video {
   margin: 0 0 28px; }
 
+.author-box:before,
+.clearfix:before,
+.entry:before,
+.entry-content:before,
+.footer-widgets:before,
+.nav-primary:before,
+.nav-secondary:before,
+.pagination:before,
+.site-container:before,
+.site-footer:before,
+.site-header:before,
+.site-inner:before,
+.wrap:before {
+  content: " ";
+  display: table; }
+
+.author-box:after,
+.clearfix:after,
+.entry:after,
+.entry-content:after,
+.footer-widgets:after,
+.nav-primary:after,
+.nav-secondary:after,
+.pagination:after,
+.site-container:after,
+.site-footer:after,
+.site-header:after,
+.site-inner:after,
+.wrap:after {
+  clear: both;
+  content: " ";
+  display: table; }
+
 .site-inner,
 .wrap {
   margin: 0 auto;
@@ -832,6 +865,9 @@ li.comment {
 .home .site-inner {
   max-width: none; }
 
+.home .header .wrap {
+  max-width: none; }
+
 .hero {
   background: no-repeat scroll;
   background: no-repeat scroll;
@@ -928,15 +964,15 @@ li.comment {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%;
+    width: 82.94039%;
     margin-left: 17.05961%; }
     .icon-container .icon-map-2:last-child {
       margin-right: 0; }
     .icon-container .icon-map-2 .list-icon {
       float: left;
       display: block;
-      margin-right: 4.82916%;
-      width: 30.11389%; }
+      margin-right: 5.85151%;
+      width: 36.4891%; }
       .icon-container .icon-map-2 .list-icon:last-child {
         margin-right: 0; }
 
@@ -1261,7 +1297,6 @@ li.comment {
 
 .site-header {
   background-color: rgba(255, 255, 255, 0.6);
-  position: fixed;
   text-align: right;
   width: 100%;
   z-index: 999; }

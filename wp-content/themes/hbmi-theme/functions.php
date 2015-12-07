@@ -40,7 +40,7 @@ function hbmi_add_theme_support() {
 		add_theme_support( 'genesis-responsive-viewport' );
 		add_theme_support( 'genesis-after-entry-widget-area' );
 		add_theme_support( 'genesis-accessibility', array( 'headings', 'search-form', 'hbmiip-links', 'rems' ) );
-		add_theme_support( 'genesis-structural-wraps', array( 'header', 'footer-widgets', 'footer' ) );
+		//add_theme_support( 'genesis-structural-wraps', array( 'header', 'footer' ) );
 }
 
 

@@ -6,6 +6,10 @@
 	max-width: none;
 }
 
+.home .header .wrap {
+	max-width: none;
+}
+
 .hero {
   @include background(no-repeat scroll);
   background-position: top;
@@ -116,11 +120,11 @@
 	}
 
   .icon-map-2 {
-    @include span-columns(12);
+    @include span-columns(10);
     @include shift(2);
 
     .list-icon {
-      @include span-columns(2 of 6);
+      @include span-columns(2 of 5);
     }
   }
 }

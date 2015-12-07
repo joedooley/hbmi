@@ -91,21 +91,12 @@ function hbmi_svg_size() {
 }
 
 
-/**
- * Date function to display copyright in the footer
- */
-function hbmi_echo_date() {
-
-  $fromYear = 2009;
-  $thisYear = (int)date('Y');
-    $copyrightText = '&copy; Copyright &copy; ';
-    $copyrightCompanyInfo = 'Quantize Courses. All Rights Reserved.';
-    if ( ( $fromYear !== $thisYear ) ) {
-        $fromYearToThisYear = $fromYear . ( '-' . $thisYear . '&nbsp' );
-    } else {
-        $fromYearToThisYear = $fromYear . ( '' );
-    }
-
-    echo '<div class="footer-copyright-info"><small class="copyright-years">' . $copyrightText . $fromYearToThisYear . $copyrightCompanyInfo . '</small></div>';
-
+//* Customize the entire footer
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+add_action( 'genesis_footer', 'hbmi_custom_footer' );
+function hbmi_custom_footer() {
+	?>
+	<p>HealthBridge Medical &copy; 2015, &middot; All Rights Reserved.</p>
+	<?php
 }
+
