@@ -10,8 +10,8 @@
 
 // Project configuration
 var project = 'hbmi-theme', // Project name, used for build zip.
-  url       = 'hbmi-local.dev', // Local Development URL for BrowserSync. Change as-needed.
-  bower     = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
+  //url       = 'hbmi-local.dev', // Local Development URL for BrowserSync. Change as-needed.
+  bower     = './bower_components/', // Not truly using this yet, more or less playing right now. TO-DO Place in Dev
   build     = 'dist/', // Files that you want to package into a zip go here
   buildInclude  = [
         // include common file types
@@ -40,9 +40,9 @@ var project = 'hbmi-theme', // Project name, used for build zip.
 
 var gulp            = require('gulp'),
     browserSync     = require('browser-sync'),
-    reload          = browserSync.reload,
+    //reload          = browserSync.reload,
     connect         = require('gulp-connect'),
-    gulpLoadPlugins = require('gulp-load-plugins'),
+    //gulpLoadPlugins = require('gulp-load-plugins'),
     autoprefixer    = require('gulp-autoprefixer'),
     minifycss       = require('gulp-uglifycss'),
     filter          = require('gulp-filter'),
@@ -54,7 +54,7 @@ var gulp            = require('gulp'),
     concat          = require('gulp-concat'),
     notify          = require('gulp-notify'),
     cmq             = require('gulp-combine-media-queries'),
-    runSequence     = require('gulp-run-sequence'),
+    //runSequence     = require('gulp-run-sequence'),
     sass            = require('gulp-sass'),
     plugins         = require('gulp-load-plugins')({ camelize: true }),
     ignore          = require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
@@ -64,8 +64,8 @@ var gulp            = require('gulp'),
     cache           = require('gulp-cache'),
     sourcemaps      = require('gulp-sourcemaps'),
     svgstore        = require('gulp-svgstore'),
-    svgmin          = require('gulp-svgmin'),
-    rsync           = require('gulp-rsync');
+    svgmin          = require('gulp-svgmin');
+   // rsync           = require('gulp-rsync');
 
 /**
  * Browser Sync
@@ -276,19 +276,7 @@ return  gulp.src(build+'/**/')
   .pipe(notify({ message: 'Zip task complete', onLast: true }));
 });
 
-/**
- * Sending Distribution files to Pantheon via rsync
- *
- * Takes the dist folder and syncs to Pantheon
- */
-/*gulp.task('deploy', function () {
-    gulp.src('build/**')
-        .pipe(rsync({
-            root       : 'build',
-            hostname   : 'example.com',
-            destination: '/path/to/site'
-        }));
-});*/
+
 
 
 // ==== TASKS ==== //
@@ -300,14 +288,14 @@ return  gulp.src(build+'/**/')
 */
 
 // Package Distributable Theme
-gulp.task('images', function(cb) {
+gulp.task('images', function() {
     gulp.watch('./assets/images/raw/**/*', ['images']);
     gulp.watch('./assets/images/svg/sprite-src/*', ['spritesvg']);
 });
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-runSequence('styles', 'cleanup', 'vendorsJs', 'scriptsJs',  'buildFiles', 'buildImages', 'buildZip','cleanupFinal', cb);
+gulp.watch('styles', 'cleanup', 'vendorsJs', 'scriptsJs',  'buildFiles', 'buildImages', 'buildZip','cleanupFinal', cb);
 });
 
 // Gulp rsync

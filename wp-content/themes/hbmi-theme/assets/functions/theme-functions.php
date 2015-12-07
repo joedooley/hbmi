@@ -92,11 +92,11 @@ function hbmi_svg_size() {
 
 
 //* Customize the entire footer
-remove_action( 'genesis_footer', 'genesis_do_footer' );
-add_action( 'genesis_footer', 'hbmi_custom_footer' );
+remove_all_actions( 'genesis_footer' );
+add_action( 'genesis_before_footer', 'hbmi_custom_footer', 11 );
 function hbmi_custom_footer() {
 	?>
-	<p>HealthBridge Medical &copy; 2015, &middot; All Rights Reserved.</p>
+	<div class="footer-copyright"><p>HealthBridge Medical &copy; 2015, &middot; All Rights Reserved.</p></div>
 	<?php
 }
 

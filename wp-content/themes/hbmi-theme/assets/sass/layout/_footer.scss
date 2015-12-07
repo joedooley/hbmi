@@ -1,6 +1,7 @@
 // Footer Widgets
 .footer-widgets .wrap {
   padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .footer-widgets a,
@@ -28,4 +29,17 @@ div.footer-widgets {
   background-size: cover;
   min-height: em(500);
   @include outer-container(100%);
+}
+
+.footer-copyright {
+  text-align: $text-right;
+  color: $white;
+  padding-right: 1em;
+  @include transform(translateY(-30px));
+
+  @include media($small-screen-up) {
+    text-align: $text-center;
+    //@include transform(translateY(-30px));
+    padding-right: 0;
+  }
 }

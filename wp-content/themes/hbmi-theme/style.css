@@ -1488,7 +1488,8 @@ li.comment {
   padding: 0 40px; }
 
 .footer-widgets .wrap {
-  padding-top: 2em; }
+  padding-top: 2em;
+  padding-bottom: 2em; }
 
 .footer-widgets a,
 .footer-widgets p {
@@ -1517,5 +1518,19 @@ div.footer-widgets {
     clear: both;
     content: "";
     display: table; }
+
+.footer-copyright {
+  text-align: right;
+  color: #fff;
+  padding-right: 1em;
+  -webkit-transform: translateY(-30px);
+  -moz-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  -o-transform: translateY(-30px);
+  transform: translateY(-30px); }
+  @media screen and (max-width: 48em) {
+    .footer-copyright {
+      text-align: center;
+      padding-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
