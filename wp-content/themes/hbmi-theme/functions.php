@@ -72,13 +72,3 @@ unregister_sidebar( 'header-right' );
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );
 
-/**
- * @param $name
- * To use this function add this in template with svg
- * file name, inline_svg($name);
- */
-function inline_svg( $name ) {
-	$file = get_stylesheet_directory_uri();
-	$file .= '/assets/images/' . $name . '.svg';
-	include( $file );
-}

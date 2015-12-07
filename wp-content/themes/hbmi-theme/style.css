@@ -1507,14 +1507,16 @@ li.comment {
 .gform_wrapper .gform_footer input.button {
   background: #96c93d; }
 
-div.footer-widgets {
+.footer-widgets {
   background-image: url("/wp-content/themes/hbmi-theme/assets/images/footer-bg.png");
   background-size: cover;
   min-height: 31.25em;
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto; }
-  div.footer-widgets::after {
+  margin-right: auto;
+  margin-bottom: -2em;
+  padding-bottom: 2em; }
+  .footer-widgets::after {
     clear: both;
     content: "";
     display: table; }
