@@ -29,6 +29,7 @@
   position: relative;
   width: 200px;
   word-wrap: break-word;
+  background-color: $light-gray;
 }
 
 .genesis-nav-menu .sub-menu .sub-menu {
@@ -109,7 +110,6 @@
 .nav-primary .genesis-nav-menu a {
   color: $dark-gray;
   text-transform: uppercase;
-  background-color: $light-gray;
 
   &:hover,
   &:active {

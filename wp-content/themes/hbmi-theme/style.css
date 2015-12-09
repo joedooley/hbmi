@@ -1347,7 +1347,8 @@ li.comment {
   padding: 20px;
   position: relative;
   width: 200px;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  background-color: #c9c8c7; }
 
 .genesis-nav-menu .sub-menu .sub-menu {
   margin: -55px 0 0 199px; }
@@ -1407,8 +1408,7 @@ li.comment {
 
 .nav-primary .genesis-nav-menu a {
   color: #5c6770;
-  text-transform: uppercase;
-  background-color: #c9c8c7; }
+  text-transform: uppercase; }
   .nav-primary .genesis-nav-menu a:hover, .nav-primary .genesis-nav-menu a:active {
     background-color: #c9c8c7;
     color: #fff; }
