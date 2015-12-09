@@ -1407,7 +1407,8 @@ li.comment {
 
 .nav-primary .genesis-nav-menu a {
   color: #5c6770;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  background-color: #c9c8c7; }
   .nav-primary .genesis-nav-menu a:hover, .nav-primary .genesis-nav-menu a:active {
     background-color: #c9c8c7;
     color: #fff; }

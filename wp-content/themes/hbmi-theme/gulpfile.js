@@ -39,7 +39,7 @@ var project = 'hbmi-theme', // Project name, used for build zip.
       ];
 
 var gulp            = require('gulp'),
-    browserSync     = require('browser-sync'),
+    //browserSync     = require('browser-sync'),
     //reload          = browserSync.reload,
     connect         = require('gulp-connect'),
     //gulpLoadPlugins = require('gulp-load-plugins'),
@@ -65,7 +65,6 @@ var gulp            = require('gulp'),
     sourcemaps      = require('gulp-sourcemaps'),
     svgstore        = require('gulp-svgstore'),
     svgmin          = require('gulp-svgmin');
-   // rsync           = require('gulp-rsync');
 
 /**
  * Browser Sync
@@ -295,11 +294,8 @@ gulp.task('images', function() {
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-gulp.watch('styles', 'cleanup', 'vendorsJs', 'scriptsJs',  'buildFiles', 'buildImages', 'buildZip','cleanupFinal', cb);
+gulp.watch('styles', 'cleanup', 'vendogulp stylesrsJs', 'scriptsJs',  'buildFiles', 'buildImages', 'buildZip','cleanupFinal', cb);
 });
-
-// Gulp rsync
-gulp.task('deploy', ['rsync']);
 
 
 // Watch Task
