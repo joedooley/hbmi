@@ -1417,6 +1417,9 @@ li.comment {
     -moz-transition: opacity 1s ease-in 0s, width 2s ease-in 2s;
     transition: opacity 1s ease-in 0s, width 2s ease-in 2s; }
 
+.genesis-nav-menu .menu-item-has-children:hover {
+  background-color: #c9c8c7; }
+
 @media screen and (max-width: 60em) {
   .genesis-nav-menu li,
   .site-header ul.genesis-nav-menu,

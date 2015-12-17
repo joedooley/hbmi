@@ -122,6 +122,10 @@
 
 }
 
+.genesis-nav-menu .menu-item-has-children:hover {
+  background-color: $light-gray;
+}
+
 // Navigation Breakpoint at 960px
 @include media($large-screen-up) {
   .genesis-nav-menu li,

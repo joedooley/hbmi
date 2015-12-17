@@ -135,7 +135,7 @@ function hbmi_body_class( $classes ) {
 function hbmi_svgsprite() {
 	( is_front_page() );
 		echo '<div class="hidden">';
-			echo file_get_contents( get_stylesheet_directory_uri() . "/assets/images/svg/sprite/svgsprite.svg" );
+			include_once( CHILD_DIR . '/assets/images/svg/sprite/svgsprite.svg' );
 		echo '</div>';
 }
 
