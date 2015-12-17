@@ -101,8 +101,6 @@ function hbmi_fc_check() {
 	// If "Flexible Content" field has rows of data
 	if ( ! is_admin() ) {
 
-		add_action( 'genesis_before_header', 'hbmi_svgsprite' );
-
 		// Force full width content
 		add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
@@ -129,15 +127,6 @@ function hbmi_body_class( $classes ) {
 	return $classes;
 }
 
-/**
- * Hidden Div for SVG Sprite Sheet
- */
-function hbmi_svgsprite() {
-	( is_front_page() );
-		echo '<div class="hidden">';
-			include_once( CHILD_DIR . '/assets/images/svg/sprite/svgsprite.svg' );
-		echo '</div>';
-}
 
 
 genesis();

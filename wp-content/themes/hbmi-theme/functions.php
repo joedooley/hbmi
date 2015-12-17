@@ -72,3 +72,14 @@ unregister_sidebar( 'header-right' );
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );
 
+
+add_action( 'genesis_before_header', 'hbmi_svgsprite' );
+/**
+ * Hidden Div for SVG Sprite Sheet
+ */
+function hbmi_svgsprite() {
+	( is_front_page() );
+	echo '<div class="hidden">';
+	include_once( CHILD_DIR . '/assets/images/svg/sprite/svgsprite.svg' );
+	echo '</div>';
+}
