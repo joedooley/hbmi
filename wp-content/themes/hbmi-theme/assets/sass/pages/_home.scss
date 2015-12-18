@@ -100,7 +100,7 @@
 	}
 }
 
-.icon-map .list-icon:nth-child(2) {
+.home .icon-map .list-icon:nth-child(2) {
 	padding-top: em(70);
 
 	@include media($xsmall-screen-up) {
@@ -108,7 +108,7 @@
 	}
 }
 
-.icon-container {
+.home .icon-container {
   text-align: $text-center;
 
   .icon-map {
@@ -130,14 +130,14 @@
 }
 
 @include media($large-screen-up) {
-	 .icon {
+	 .home .icon {
 		width: 75%;
 	}
 }
 
 @include media($xsmall-screen-up) {
-	.icon-container .icon-map,
-	.icon-container .icon-map-2 {
+	.home .icon-container .icon-map,
+	.home .icon-container .icon-map-2 {
 		@include fill-parent;
 		@include shift(0);
 		@include span-columns(2);

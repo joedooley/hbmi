@@ -938,68 +938,68 @@ li.comment {
     .our-services-section {
       min-height: 87.5em; } }
 
-.icon-map .list-icon:nth-child(2) {
+.home .icon-map .list-icon:nth-child(2) {
   padding-top: 4.375em; }
   @media screen and (max-width: 31.25em) {
-    .icon-map .list-icon:nth-child(2) {
+    .home .icon-map .list-icon:nth-child(2) {
       padding-top: 0; } }
 
-.icon-container {
+.home .icon-container {
   text-align: center; }
-  .icon-container .icon-map {
+  .home .icon-container .icon-map {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
-    .icon-container .icon-map:last-child {
+    .home .icon-container .icon-map:last-child {
       margin-right: 0; }
-    .icon-container .icon-map .list-icon {
+    .home .icon-container .icon-map .list-icon {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 31.76157%; }
-      .icon-container .icon-map .list-icon:last-child {
+      .home .icon-container .icon-map .list-icon:last-child {
         margin-right: 0; }
-  .icon-container .icon-map-2 {
+  .home .icon-container .icon-map-2 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%;
     margin-left: 17.05961%; }
-    .icon-container .icon-map-2:last-child {
+    .home .icon-container .icon-map-2:last-child {
       margin-right: 0; }
-    .icon-container .icon-map-2 .list-icon {
+    .home .icon-container .icon-map-2 .list-icon {
       float: left;
       display: block;
       margin-right: 5.85151%;
       width: 36.4891%; }
-      .icon-container .icon-map-2 .list-icon:last-child {
+      .home .icon-container .icon-map-2 .list-icon:last-child {
         margin-right: 0; }
 
 @media screen and (max-width: 60em) {
-  .icon {
+  .home .icon {
     width: 75%; } }
 @media screen and (max-width: 31.25em) {
-  .icon-container .icon-map,
-  .icon-container .icon-map-2 {
+  .home .icon-container .icon-map,
+  .home .icon-container .icon-map-2 {
     width: 100%;
     margin-left: 0%;
     float: left;
     display: block;
     margin-right: 16.03631%;
     width: 100%; }
-    .icon-container .icon-map:last-child,
-    .icon-container .icon-map-2:last-child {
+    .home .icon-container .icon-map:last-child,
+    .home .icon-container .icon-map-2:last-child {
       margin-right: 0; }
-    .icon-container .icon-map .list-icon,
-    .icon-container .icon-map-2 .list-icon {
+    .home .icon-container .icon-map .list-icon,
+    .home .icon-container .icon-map-2 .list-icon {
       width: 100%;
       float: left;
       display: block;
       margin-right: 16.03631%;
       width: 100%; }
-      .icon-container .icon-map .list-icon:last-child,
-      .icon-container .icon-map-2 .list-icon:last-child {
+      .home .icon-container .icon-map .list-icon:last-child,
+      .home .icon-container .icon-map-2 .list-icon:last-child {
         margin-right: 0; } }
 .list-icon {
   opacity: 0.4; }
@@ -1099,6 +1099,41 @@ li.comment {
 
 #input_2_4 {
   width: 47.5%; }
+
+.products {
+  background: #96c93d; }
+  .products .outer-container {
+    max-width: 80em;
+    margin-left: auto;
+    margin-right: auto; }
+    .products .outer-container::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .products .outer-container .row {
+      display: block;
+      margin: 2em 0; }
+      .products .outer-container .row::after {
+        clear: both;
+        content: "";
+        display: table; }
+      .products .outer-container .row .list-icon {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        .products .outer-container .row .list-icon:last-child {
+          margin-right: 0; }
+      .products .outer-container .row .icon-description {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 74.41059%;
+        margin-right: 0;
+        padding-top: 1em;
+        color: #fff; }
+        .products .outer-container .row .icon-description:last-child {
+          margin-right: 0; }
 
 /* Responsive Menu
 --------------------------------------------- */

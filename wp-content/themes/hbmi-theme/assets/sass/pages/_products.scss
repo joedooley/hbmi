@@ -1,0 +1,23 @@
+.products {
+	background: $green;
+
+	.outer-container {
+		@include outer-container;
+
+		.row {
+			@include row();
+			margin: 2em 0;
+
+			.list-icon {
+				@include span-columns(3);
+			}
+
+			.icon-description {
+				@include span-columns(9);
+				@include omega();
+				padding-top: 1em;
+				color: $white;
+			}
+		}
+	}
+}
