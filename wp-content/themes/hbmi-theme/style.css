@@ -773,7 +773,8 @@ img.alignright,
   color: #ddd; }
 
 .entry-title {
-  font-size: 2em; }
+  font-size: 2em;
+  color: #5c6770; }
 
 .entry-title a,
 .sidebar .widget-title a {
@@ -1097,9 +1098,6 @@ li.comment {
 .archive-title {
   font-size: 1.2em; }
 
-#input_2_4 {
-  width: 47.5%; }
-
 .products {
   background: #96c93d; }
   .products .outer-container {
@@ -1131,7 +1129,7 @@ li.comment {
         width: 74.41059%;
         margin-right: 0;
         padding-top: 1em;
-        color: #fff; }
+        color: #5c6770; }
         .products .outer-container .row .icon-description:last-child {
           margin-right: 0; }
 
@@ -1539,16 +1537,17 @@ li.comment {
   color: #fff;
   font-style: normal; }
 
-.home .gfield_label {
+.gfield_label {
   color: #96c93d; }
 
-.home .gform_wrapper .top_label input.medium,
-.home .gform_wrapper .top_label select.medium {
-  padding: 15px 0;
+.gform_wrapper .top_label input.large,
+.gform_wrapper .top_label select.large {
+  padding: 0.75em 0;
   width: 100%; }
 
 .gform_wrapper .gform_footer input.button {
-  background: #96c93d; }
+  background: #96c93d;
+  padding: 0.75em 2.5em; }
 
 .footer-widgets {
   background-image: url("/wp-content/themes/hbmi-theme/assets/images/footer-bg.png");
