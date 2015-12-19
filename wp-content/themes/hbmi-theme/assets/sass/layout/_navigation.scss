@@ -8,7 +8,12 @@
   display: block;
   font-family: $cooper-medium;
   font-size: $base-font-size;
-  padding: 30px 20px;
+  padding: em(30) em(20);
+
+  @include media($small-screen-up-xl) {
+    padding-left: em(10);
+    padding-right: em(10);
+  }
 }
 
 .genesis-nav-menu .sub-menu {
@@ -122,7 +127,11 @@
 
 }
 
-.genesis-nav-menu .menu-item-has-children:hover {
+.nav-primary .genesis-nav-menu .current-menu-item > a {
+  color: $green;
+}
+
+  .genesis-nav-menu .menu-item-has-children:hover {
   background-color: $light-gray;
 }
 

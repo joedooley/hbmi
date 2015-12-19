@@ -18,6 +18,10 @@
 
 .content .entry {
   margin-top: 11em;
+
+  @include media($small-screen-up) {
+    padding: 1.5em;
+  }
 }
 
 .entry-content ol,

@@ -10,13 +10,31 @@
 
 			.list-icon {
 				@include span-columns(3);
+				padding-right: 2em;
+
+				@include media($small-screen-up) {
+					@include fill-parent;
+					padding-right: 0;
+					text-align: $text-center;
+				}
 			}
 
 			.icon-description {
-				@include span-columns(9);
+				@include span-columns(8);
 				@include omega();
+				@include shift(1);
 				padding-top: 1em;
 				color: $dark-gray;
+
+				@include media($small-screen-up) {
+					@include fill-parent;
+					@include shift(0);
+					padding: em(50) em(75);
+					
+					&:first-child {
+						padding-top: em(80);
+					}
+				}
 			}
 		}
 	}

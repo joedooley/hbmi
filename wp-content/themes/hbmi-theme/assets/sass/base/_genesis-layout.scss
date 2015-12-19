@@ -223,3 +223,9 @@
     width: 100%;
   }
 }
+
+@include media($small-screen-up) {
+  .site-inner {
+    padding-top: em(100);
+  }
+}

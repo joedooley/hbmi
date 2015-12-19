@@ -2,6 +2,10 @@
 .footer-widgets .wrap {
   padding-top: 2em;
   padding-bottom: 2em;
+
+  @include media($xsmall-screen-up) {
+    padding: 1.5em;
+  }
 }
 
 .footer-widgets a,

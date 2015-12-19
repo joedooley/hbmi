@@ -78,8 +78,11 @@ add_action( 'genesis_before_header', 'hbmi_svgsprite' );
  * Hidden Div for SVG Sprite Sheet
  */
 function hbmi_svgsprite() {
-	( is_front_page() );
-	echo '<div class="hidden">';
-	include_once( CHILD_DIR . '/assets/images/svg/sprite/svgsprite.svg' );
-	echo '</div>';
+	if ( is_front_page() || is_page( 'products' ) ) {
+
+		echo '<div class="hidden">';
+		include_once( CHILD_DIR . '/assets/images/svg/sprite/svgsprite.svg' );
+		echo '</div>';
+
+	}
 }
